@@ -1,4 +1,5 @@
 use crate::error::Error;
+use rs_latlon::Location;
 
 pub struct Pointer {
   pub lat: f64,
@@ -35,5 +36,12 @@ impl Pointer {
         seismic_intensity: seismic_intensity,
       })
     }
+  }
+
+  pub fn parse_to_canvas(
+    &self,
+    location: Location,
+  ) -> Result<(f64, f64), Box<dyn std::error::Error>> {
+    Ok(location.from_latlon(self.lat, self.lon)?)
   }
 }
