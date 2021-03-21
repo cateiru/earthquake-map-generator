@@ -1,13 +1,13 @@
 use crate::error::Error;
 
 pub struct Pointer {
-  lat: f64,
-  lon: f64,
+  pub lat: f64,
+  pub lon: f64,
   // if true, epicenter version.
-  is_epicenter: bool,
+  pub is_epicenter: bool,
   // if true, seismic_intensity is "0", "1", "2", "3", "4", "5_low", "5_up", "6_low", "6_up", "7"
   // if false, this None.
-  seismic_intensity: Option<String>,
+  pub seismic_intensity: Option<String>,
 }
 
 impl Pointer {
