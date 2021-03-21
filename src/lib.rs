@@ -1,7 +1,8 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+mod error;
+mod generator;
+mod pointer;
+
+pub use self::generator::EAGenerator;
+pub use self::pointer::Pointer;
+
+pub use self::error::Error;
