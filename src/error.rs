@@ -4,4 +4,6 @@ use thiserror::Error;
 pub enum Error {
   #[error("variable `{0}` is not defined.")]
   NotDefineError(String),
+  #[error("Skia error: {0}")]
+  SkiaError(String),
 }
